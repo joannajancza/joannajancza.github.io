@@ -45,10 +45,18 @@ $(document).ready(function(){
         "OpenStreetMaps":lyrOSM,
         "ORTOFOTOMAPA":lyrORTO,
         "Mapa Sozologiczna":lyrSOZO,
-        "Wykaz wojewodztw":lyrPRGWOJ
+        
     };
     
-    L.control.layers(BaseMaps).addTo(mymap);
+    
+    
+    
+    //lista warstw w checkboxach
+    var overlays = {
+                    "Wykaz wojewodztw":lyrPRGWOJ
+                    };
+    
+    L.control.layers(BaseMaps, overlays).addTo(mymap);
     L.control.scale({imperial:false}).addTo(mymap);
     
 });
