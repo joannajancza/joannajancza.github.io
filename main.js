@@ -1,8 +1,8 @@
 $(document).ready(function(){
    var mymap = L.map('mymap',
                     {
-                     center: [52.1, 21.0], 
-                     zoom: 10,
+                     center: [54.1, 23.6], 
+                     zoom: 9,
                      zoomControl:true,
                      attributionControl:false
                     }
@@ -51,7 +51,7 @@ $(document).ready(function(){
     
     var lyrKOLEJE = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
             {
-            layers:'koleje',
+            layers:'kolej',
             format:'image/png',
             transparent: 'true',
             version:'1.1.1'
@@ -87,7 +87,7 @@ $(document).ready(function(){
     
     var lyrSZKOŁY = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
             {
-            layers:'szkoły',
+            layers:'szkoly',
             format:'image/png',
             transparent: 'true',
             version:'1.1.1'
@@ -105,7 +105,7 @@ $(document).ready(function(){
     
     var lyrCMENTARZE = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
             {
-            layers:'cmentarze',
+            layers:'cmentarz',
             format:'image/png',
             transparent: 'true',
             version:'1.1.1'
