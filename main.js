@@ -40,11 +40,90 @@ $(document).ready(function(){
     var lyrOSM = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
     mymap.addLayer(lyrOSM);
     
+    var lyrDROGI = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'drogi',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
     
+    var lyrKOLEJE = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'koleje',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
+    
+    var lyrRZEKI = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'rzeki',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
+    
+    var lyrWODY = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'wody',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
+    
+    var lyrREKREACJA = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'rekreacja',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
+    
+    var lyrSZKOŁY = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'szkoły',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
+    
+    var lyrOSIEDLA = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'osiedla',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
+    
+    var lyrCMENTARZE = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'cmentarze',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
+    
+    var lyrOCZYSZCALNIE = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+            {
+            layers:'oczyszczalnie',
+            format:'image/png',
+            transparent: 'true',
+            version:'1.1.1'
+            }
+    );
     var BaseMaps = {
         "OpenStreetMaps":lyrOSM,
         "ORTOFOTOMAPA":lyrORTO,
-        "Mapa Sozologiczna":lyrSOZO,
+        "Mapa Sozologiczna":lyrSOZO
         
     };
     
@@ -53,7 +132,16 @@ $(document).ready(function(){
     
     //lista warstw w checkboxach
     var overlays = {
-                    "Wykaz wojewodztw":lyrPRGWOJ
+                    "Wykaz wojewodztw":lyrPRGWOJ,
+                    "Drogi": lyrDROGI,
+                    "Koleje": lyrKOLEJE,
+                    "Rzeki": lyrRZEKI,
+                    "Wody powierzchniowe": lyrWODY,
+                    "Tereny rekreacyjne": lyrREKREACJA,
+                    "Szkoły": lyrSZKOŁY,
+                    "Osiedla mieszkaniowe": lyrOSIEDLA,
+                    "Cmentarze": lyrCMENTARZE,
+                    "Oczyszczalnie ścieków": lyrOCZYSZCALNIE
                     };
     
     L.control.layers(BaseMaps, overlays).addTo(mymap);
