@@ -1,6 +1,6 @@
 body
 {
-    background-color: #2f3336;
+    background-color: #6d0024;
     color: #efefef;
     margin:0;
     font-size: 17px;
@@ -10,7 +10,7 @@ h1.logo
 {
     font-size:44px;
     font-weight: 700;
-    color:#ddd;
+    color:#7f4448;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -28,7 +28,7 @@ h1.logo
 
 nav
 {
-    background-color: #1c74b2;
+    background-color: #7f4448;
     text-align: center;
 }
 
@@ -107,7 +107,6 @@ figure
 .tekst
 {
     text-align: justify;
-    text-indent: 3rem;
     margin-left: 2rem;
     margin-right: 2rem;
 }
@@ -119,4 +118,25 @@ figure
     width: 800px;
     height: auto;
     margin: auto;
+}
+
+.opis
+{
+    text-align: justify;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.dane
+{
+    text-align: justify;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.modele
+{
+    text-align: justify;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }

@@ -1,8 +1,8 @@
 $(document).ready(function(){
    var mymap = L.map('mymap',
                     {
-                     center: [54.1, 23.6], 
-                     zoom: 9,
+                     center: [54.1, 23.3], 
+                     zoom: 10,
                      zoomControl:true,
                      attributionControl:false
                     }
@@ -105,14 +105,14 @@ $(document).ready(function(){
     
     var lyrCMENTARZE = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
             {
-            layers:'cmentarz',
+            layers:'cmentarze',
             format:'image/png',
             transparent: 'true',
             version:'1.1.1'
             }
     );
     
-    var lyrOCZYSZCALNIE = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
+    var lyrOCZYSZCZALNIE = L.tileLayer.wms('http://localhost:8080/geoserver/ATE_Workspace/wms',
             {
             layers:'oczyszczalnie',
             format:'image/png',
@@ -141,7 +141,7 @@ $(document).ready(function(){
                     "Szkoły": lyrSZKOŁY,
                     "Osiedla mieszkaniowe": lyrOSIEDLA,
                     "Cmentarze": lyrCMENTARZE,
-                    "Oczyszczalnie ścieków": lyrOCZYSZCALNIE
+                    "Oczyszczalnie ścieków": lyrOCZYSZCZALNIE
                     };
     
     L.control.layers(BaseMaps, overlays).addTo(mymap);
